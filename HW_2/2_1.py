@@ -10,21 +10,50 @@
 
 # Не получается сделать прерывание цикла, если вместо знака операции введен 0
 
+
+print('Ноль в качестве знака операции завершит работу программы')
+
 while True:
-    num_1 = int(input('Введите первое число: '))
-    num_2 = int(input('Введите второе число: '))
-    sign_of_operation = str(input('Введите знак операции: '))
-    sign = sign_of_operation
-    if num_2 != 0:
-        if sign == 0:
-            exit()
-        elif sign == '+':
-            print(num_1 + num_2)
-        elif sign == '-':
-            print(num_1 - num_2)
-        elif sign == '*':
-            print(num_1 * num_2)
-        elif sign == '/':
-            print(num_1 / num_2)
+    s = input('Знак (+,-,*,/): ')
+    if s == 0:
+        break
+    if s in {'+', '-', '*', '/'}:  # Во множестве скорость поиска самая максимальная
+        x = float(input('x = '))
+        y = float(input('y = '))
+    if s == '+':
+        print(f'{x+y:.2f}')
+    elif s == '-':
+        print(f'{x-y:.2f}')
+    elif s == '*':
+        print(f'{x*y:.2f}')
+    elif s == '/':
+        if y != 0:
+            print(f'{x/y:.2f}')
+        else:
+            print('Деление на 0!')
     else:
-        print('Ай-яй-яй! На 0 делить нельзя')
+        print('Неверный знак операции!')
+
+
+
+
+#=====================================================================================================================
+# мой вариант
+# while True:
+#     num_1 = int(input('Введите первое число: '))
+#     num_2 = int(input('Введите второе число: '))
+#     sign_of_operation = str(input('Введите знак операции: '))
+#     sign = sign_of_operation
+#     if num_2 != 0:
+#         if sign == 0:
+#             exit()
+#         elif sign == '+':
+#             print(num_1 + num_2)
+#         elif sign == '-':
+#             print(num_1 - num_2)
+#         elif sign == '*':
+#             print(num_1 * num_2)
+#         elif sign == '/':
+#             print(num_1 / num_2)
+#     else:
+#         print('Ай-яй-яй! На 0 делить нельзя')

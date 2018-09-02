@@ -9,17 +9,36 @@
 
 import random
 
-num = random.randint(0, 101)
-num_attempt = 0
+num = random.randint(0, 100)
+print('Отгадайте число от 0 д 100 за 10 попыток')
+for i in range(1, 11):
+    answer = int(input(f'Попытка {i}: '))
+    if num < answer:
+        print('Число меньше')
+    elif num > answer:
+        print('Число больше')
+    else:
+        print(f'Вы угадали число с {i}-й попытки')
+        break  # Если не сработал break, то вызывается print
+else:
+    print(f'Поражение. Было загадано {num}')
 
-while num_attempt < 10:
-    attempt = int(input('Угадайте сгенерированное число: '))
-    if attempt != num:
-        if attempt < num:
-            print('Загаданное число больше')
-        elif attempt > num:
-            print('Загаданное число меньше')
-    num_attempt += 1
-    if attempt == num:
-        print('Вы угадали!!!')
-print(f'Количество попыток кончилось, было загаданно число {num}')
+
+#=====================================================================================================================
+# мой вариант
+# import random
+#
+# num = random.randint(0, 101)
+# num_attempt = 0
+#
+# while num_attempt < 10:
+#     attempt = int(input('Угадайте сгенерированное число: '))
+#     if attempt != num:
+#         if attempt < num:
+#             print('Загаданное число больше')
+#         elif attempt > num:
+#             print('Загаданное число меньше')
+#     num_attempt += 1
+#     if attempt == num:
+#         print('Вы угадали!!!')
+# print(f'Количество попыток кончилось, было загаданно число {num}')

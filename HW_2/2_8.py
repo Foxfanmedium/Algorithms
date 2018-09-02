@@ -5,14 +5,41 @@
 задаются вводом с клавиатуры.
 """
 
-num = input('Введите последовательность чисел: ')
-search_number = input('Введите цифру для подсчета: ')
-counter = 0
+#Version_1
 
-list_of_figures = list(num)
+num = int(input('Введите количество чисел: '))
+digit = int(input('какую цийру посчитать: '))
+count = 0
+for i in range (1, num +1):
+    m = int(input(f'Введите число {i}: '))
+    while m > 0:
+        if m % 10 == digit:
+            count += 1
+        m = m // 10
 
-for i in list_of_figures:
-    if i == search_number:
-        counter += 1
+print(f'Было введено {count} цифр {digit}')
 
-print(counter)
+#Version_2
+# num = int(input('Введите количество чисел: '))
+# digit = int(input('какую цийру посчитать: '))
+# count = 0
+# for i in range (1, num +1):
+#     ans = input(f'Введите число {i}: ')
+#     count += ans.count(digit)
+#
+# print(f'Было введено {count} цифр {digit}')
+
+
+#=====================================================================================================================
+# мой вариант
+# num = input('Введите последовательность чисел: ')
+# search_number = input('Введите цифру для подсчета: ')
+# counter = 0
+#
+# list_of_figures = list(num)
+#
+# for i in list_of_figures:
+#     if i == search_number:
+#         counter += 1
+#
+# print(counter)

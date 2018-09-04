@@ -5,16 +5,16 @@
 """
 
 # Version_1
-num = int(input('Введите целое число: '))
-even, odd = 0, 0
-
-while num > 0:
-    if num % 2 == 0:
-        even += 1
-    else:
-        odd += 1
-    num = num // 10
-print(f'четных - {even}, нечетных - {odd}')
+# num = int(input('Введите целое число: '))
+# even, odd = 0, 0
+#
+# while num > 0:
+#     if num % 2 == 0:
+#         even += 1
+#     else:
+#         odd += 1
+#     num = num // 10
+# print(f'четных - {even}, нечетных - {odd}')
 
 
 
@@ -35,18 +35,18 @@ print(f'четных - {even}, нечетных - {odd}')
 #=====================================================================================================================
 # мой вариант
 
-# num = list(input('Введите несколько цифр натурального числа: '))
-# list_numbers = list()
-# odds_numbers = list()
-# evens_numbers = list()
-#
-# for i in num:
-#     list_numbers.append(int(i))
-#
-# for i in list_numbers:
-#     if i % 2 == 0:
-#         evens_numbers.append(i)
-#     else:
-#         odds_numbers.append(i)
-# print(len(evens_numbers))
-# print(len(odds_numbers))
+num = list(input('Введите несколько цифр натурального числа: '))
+list_numbers = list()
+odds_numbers = list()
+evens_numbers = list()
+
+for i in num:
+    list_numbers.append(int(i))
+
+for i in list_numbers:
+    if i % 2 == 0:
+        evens_numbers.append(i)
+    else:
+        odds_numbers.append(i)
+print(len(evens_numbers))
+print(len(odds_numbers))

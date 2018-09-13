@@ -74,22 +74,22 @@ from typing import List
 """
 Оригинальный код без функции который был в ДЗ к уроку 2
 num = list(input('Введите несколько цифр натурального числа: '))
-list_numbers = list()
-odds_numbers = list()
-evens_numbers = list()
-
-for i in num:
-    list_numbers.append(int(i))
-
-for i in list_numbers:
-    if i % 2 == 0:
-        evens_numbers.append(i)
-    else:
-        odds_numbers.append(i)
-print(len(evens_numbers))
-print(len(odds_numbers))
-delta = time.time() - start
-print(delta)
+# list_numbers = list()
+# odds_numbers = list()
+# evens_numbers = list()
+# 
+# for i in num:
+#     list_numbers.append(int(i))
+# 
+# for i in list_numbers:
+#     if i % 2 == 0:
+#         evens_numbers.append(i)
+#     else:
+#         odds_numbers.append(i)
+# print(len(evens_numbers))
+# print(len(odds_numbers))
+# delta = time.time() - start
+# print(delta)
 """
 
 #=====================================================================================================================
@@ -104,22 +104,22 @@ print(delta)
 import random
 import cProfile
 
-def create_matrix(size):
-    start = time.time()
-    matrix = [[random.randint(0, 100) for _ in range(size)] for _ in range(size)]
-    for line in matrix:
-        print(*line, sep='\t')
-    max_=matrix[0][0]
-    for j in range(size):
-        min_ = matrix[0][j]
-
-        for i in range(size):
-            if matrix[i][j] < min_:
-                min_=matrix[i][j]
-        if min_ > max_:
-            max_ = min_
-    print(f'Max in min = {max_}')
-    print(time.time() - start)
+# def create_matrix(size):
+#     start = time.time()
+#     matrix = [[random.randint(0, 100) for _ in range(size)] for _ in range(size)]
+#     for line in matrix:
+#         print(*line, sep='\t')
+#     max_=matrix[0][0]
+#     for j in range(size):
+#         min_ = matrix[0][j]
+#
+#         for i in range(size):
+#             if matrix[i][j] < min_:
+#                 min_=matrix[i][j]
+#         if min_ > max_:
+#             max_ = min_
+#     print(f'Max in min = {max_}')
+#     print(time.time() - start)
 
 # cProfile.run('create_matrix(10)')
 #       543 function calls in 0.001 seconds
@@ -197,3 +197,46 @@ def create_matrix(size):
 # print(f'Max in min = {max_}')
 
 #=====================================================================================================================
+
+import time
+import timeit
+
+start = time.time()
+b = [i for i in range(1000000)]
+delta = time.time() - start
+print(b)
+print(delta)
+
+x = 2 + 2
+
+print(timeit.timeit('b = [i for i in range(1000)]'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
